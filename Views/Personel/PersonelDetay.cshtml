@@ -1,0 +1,50 @@
+﻿@model WebApp_MVC_Project.Models.Personel
+@{
+    <h1>Personel Detay</h1>
+
+
+    <div>
+        <form asp-action="PersonelDetay">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" value="@Model.Id" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad" class="control-label"></label>
+                <input asp-for="Ad" class="form-control" value="@Model.Ad" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Soyad" class="control-label"></label>
+                <input asp-for="Soyad" class="form-control" value="@Model.Soyad" />
+                <span asp-validation-for="Soyad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gorevi" class="control-label"></label>
+                <input asp-for="Gorevi" class="form-control" value="@Model.Gorevi" />
+                <span asp-validation-for="Gorevi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YonetimTip11" class="control-label"></label>
+                <input asp-for="YonetimTip11" class="form-control" value="@Model.YonetimTip11" />
+                <span asp-validation-for="YonetimTip11" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YonetimTip12" class="control-label"></label>
+                <input asp-for="YonetimTip12" class="form-control" value="@Model.YonetimTip12" />
+                <span asp-validation-for="YonetimTip12" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YonetimTip13" class="control-label"></label>
+                <input asp-for="YonetimTip13" class="form-control" value="@Model.YonetimTip13" />
+                <span asp-validation-for="YonetimTip13" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+
+    </div>
+}

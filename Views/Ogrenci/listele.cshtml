@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Ogrenci>
+@{
+    <h1>Öğrenci Listeleme</h1>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KayitTarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ÖgrenciNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogumTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bolum)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Soyad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KayitTarih)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ÖgrenciNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DogumTarihi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bolum)
+                </td>
+                <td>
+                    @Html.ActionLink("Guncelle", "OgrenciDetay", new {  id=item.Id  }) |
+                    @Html.ActionLink("Sil", "OgrenciSil", new {  id=item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

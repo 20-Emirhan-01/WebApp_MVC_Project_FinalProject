@@ -1,0 +1,81 @@
+﻿@model IEnumerable<WebApp_MVC_Project.Models.OgrenciDers>
+@{
+    <h1>Öğrenci Ders Listeleme</h1>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KayitTarih)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ÖgrenciNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DogumTarihi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bolum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DersAd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kredisi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OkulYonetimId)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Soyad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KayitTarih)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ÖgrenciNo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DogumTarihi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Bolum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DersAd)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kredisi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OkulYonetimId)
+                </td>
+                <td>
+                    @Html.ActionLink("Guncelle", "OgrenciDersDetay", new {  id=item.Id  }) |
+                    @Html.ActionLink("Sil", "OgrenciDersSil", new {  id=item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

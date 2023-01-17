@@ -1,0 +1,65 @@
+﻿@model WebApp_MVC_Project.Models.OgrenciDers
+@{
+    <h1>Öğrenci Ders Detay</h1>
+
+
+    <div>
+        <form asp-action="OgrenciDersDetay">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" value="@Model.Id" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ad" class="control-label"></label>
+                <input asp-for="Ad" class="form-control" value="@Model.Ad" />
+                <span asp-validation-for="Ad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Soyad" class="control-label"></label>
+                <input asp-for="Soyad" class="form-control" value="@Model.Soyad" />
+                <span asp-validation-for="Soyad" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="KayitTarih" class="control-label"></label>
+                <input asp-for="KayitTarih" class="form-control" value="@Model.KayitTarih" />
+                <span asp-validation-for="KayitTarih" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ÖgrenciNo" class="control-label"></label>
+                <input asp-for="ÖgrenciNo" class="form-control" value="@Model.ÖgrenciNo" />
+                <span asp-validation-for="ÖgrenciNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DogumTarihi" class="control-label"></label>
+                <input asp-for="DogumTarihi" class="form-control" value="@Model.DogumTarihi" />
+                <span asp-validation-for="DogumTarihi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bolum" class="control-label"></label>
+                <input asp-for="Bolum" class="form-control" value="@Model.Bolum" />
+                <span asp-validation-for="Bolum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DersAd" class="control-label"></label>
+                <input asp-for="DersAd" class="form-control" value="@Model.DersAd" />
+                <span asp-validation-for="DersAd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kredisi" class="control-label"></label>
+                <input asp-for="Kredisi" class="form-control" value="@Model.Kredisi" />
+                <span asp-validation-for="Kredisi" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OkulYonetimId" class="control-label"></label>
+                <input asp-for="OkulYonetimId" class="form-control" value="@Model.OkulYonetimId" />
+                <span asp-validation-for="OkulYonetimId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+
+    </div>
+}

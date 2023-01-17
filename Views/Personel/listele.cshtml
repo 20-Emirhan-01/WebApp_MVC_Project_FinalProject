@@ -1,0 +1,64 @@
+﻿@model IEnumerable<WebApp_MVC_Project.Models.Personel>
+@{
+    <h1>Personel Listeleme</h1>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Soyad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gorevi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YonetimTip11)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YonetimTip12)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.YonetimTip13)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Soyad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Gorevi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YonetimTip11)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YonetimTip12)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.YonetimTip13)
+                </td>
+                <td>
+                    @Html.ActionLink("Guncelle", "PersonelDetay", new {  id=item.Id  }) |
+                    @Html.ActionLink("Sil", "PersonelSil", new {  id=item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

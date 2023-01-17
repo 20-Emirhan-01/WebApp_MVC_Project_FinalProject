@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Ders>
+@{
+    <h1>Ders Listeleme</h1>
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Kredisi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OkulYonetimId)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kredisi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OkulYonetimId)
+                </td>
+                <td>
+                    @Html.ActionLink("Guncelle", "DersDetay", new {  id=item.Id  }) |
+                    @Html.ActionLink("Sil", "DersSil", new {  id=item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
